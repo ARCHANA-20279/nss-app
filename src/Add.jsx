@@ -5,7 +5,6 @@ import Nav from './component/Nav'
 const Add = () => {
     const[input,changeInput]=useState({
 
-        "volunteer_id":"",
         "fullname":"",
         "email":"",
         "phone":"",
@@ -27,7 +26,7 @@ const Add = () => {
     const readValue=()=>{
 
         console.log(input)
-        axios.post("",input).then(
+        axios.post("http://localhost:5000/add-volunteer",input).then(
             (response)=>{response.data}
         ).catch()
     }
@@ -38,44 +37,38 @@ const Add = () => {
     <div className="row">
         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div className="row">
-                <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <label htmlFor="" className="form-label">Volunteer_id</label>
-                    <input type="text" className="form-control"
-                    name="Teamid"
-                    value={input.volunteer_id}
-                    onChange={inputHandler} />
-                </div>
+               
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Fullname</label>
                     <input type="text" className="form-control"
-                    name="Teamname"
+                    name="fullname"
                     value={input.fullname}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Email</label>
                     <input type="Email" className="form-control"
-                    name="Teamleader"
+                    name="email"
                     value={input.email}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Phone</label>
-                    <input type="email" className="form-control"
-                    name="Phone"
+                    <input type="phone" className="form-control"
+                    name="phone"
                     value={input.phone}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Dob</label>
                     <input type="date" className="form-control"
-                    name="Dob"
+                    name="dob"
                     value={input.dob}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Gender</label>
-                    <select id="" className="form-select" name="Gender" value={input.gender} onChange={inputHandler}>
+                    <select id="" className="form-select" name="gender" value={input.gender} onChange={inputHandler}>
                         <option value="select">select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
@@ -83,7 +76,7 @@ const Add = () => {
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Blood</label>
-                    <select id="" className="form-select" name="Blood" value={input.blood} onChange={inputHandler}>
+                    <select id="" className="form-select" name="blood" value={input.blood} onChange={inputHandler}>
                         <option value="select">select</option>
                         <option value="A+">A+</option>
                         <option value="B+">B+</option>
@@ -93,7 +86,7 @@ const Add = () => {
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Dep</label>
-                    <select  id="" className="form-select" name="Blood" value={input.dep} onChange={inputHandler}>
+                    <select  id="" className="form-select" name="dep" value={input.dep} onChange={inputHandler}>
                         <option value="select">select</option>
                         <option value="MCA">MCA</option>
                         <option value="Btech">Btech</option>
@@ -103,35 +96,35 @@ const Add = () => {
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Year</label>
                     <input type="date" className="form-control"
-                    name="Problem"
+                    name="year"
                     value={input.year}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Camp</label>
                     <input type="text" className="form-control"
-                    name="Camp"
+                    name="camp"
                     value={input.camp}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Hour</label>
                     <input type="text" className="form-control"
-                    name="Hour"
+                    name="hour"
                     value={input.hour}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                      <label htmlFor="" className="form-label">Address</label>
                     <input type="text" className="form-control"
-                    name="Address"
+                    name="address"
                     value={input.address}
                     onChange={inputHandler} />
                 </div>
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                     <label htmlFor="" className="form-label">Unit</label>
                     <input type="text" className="form-control"
-                    name="Unit"
+                    name="unit"
                     value={input.unit}
                     onChange={inputHandler} />
 

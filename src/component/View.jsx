@@ -8,7 +8,7 @@ const View = () => {
     const [data,changeData]=useState([])
     const fetchData=()=>{
 
-        axios.get("").then(
+        axios.post("http://localhost:5000/view-volunteer").then(
            
             (response)=>{
                     console.log(response.data)
@@ -30,7 +30,7 @@ const View = () => {
                         <table className="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>volunteer_id</th>
+                                   
                                     <th>fullname</th>
                                     <th>email</th>
                                     <th>phone</th>
@@ -49,7 +49,7 @@ const View = () => {
                             <tbody>
                                 {data.map((value, index) => (
                                     <tr key={index}>
-                                        <td>{value.volunteer_id}</td>
+                                      
                                         <td>{value.fullname}</td>
                                         <td>{value.email}</td>
                                         <td>{value.phone}</td>
